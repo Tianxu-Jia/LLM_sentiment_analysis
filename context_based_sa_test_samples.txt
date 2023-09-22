@@ -1,0 +1,509 @@
+
+1. No Clear Opinion
+    In all the sub-class sutiation, all phrase are labelled as No Clear Opinion
+    1) Phrase is purely an observation, description, or a statement of fact;  
+
+        <Context: any,
+        Phrase: I believe our room cleaner/maid was called Rachel.
+        >
+        Sentiment: No clear opinion
+
+        <Context: any,
+        Phrase: I can’t recall his name.
+        >
+        Sentiment: No clear opinion
+
+        <Context: any,
+        Phrase: I heard the product will be released in two months. 
+        >
+        Sentiment: No clear opinion
+
+        <Context: any,
+        Phrase: I upgraded the phone. 
+        >
+        Sentiment: No clear opinion
+
+        <Context: any,
+        Phrase: I am not good at using coupon.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Neutral context,
+        Phrase: Staff wear masks in the store
+        >
+        Sentiment: No clear opinion
+
+        <Context: Neutral context,
+        Phrase: I saw the sanitizer provided in the store
+        >
+        Sentiment: No clear opinion
+
+        <Context: Negative,
+        Phrase: He explained to me the order was cancelled.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Positive,
+        Phrase: It will make you a better company.
+        >
+        Sentiment: No clear opinion
+    
+    2) the sentiment is neutral about the product or company.
+        <Context: Any,
+        Phrase: Nothing...
+        >
+        Sentiment: No clear opinion
+    3) If the phrase is not clear but mostly descriptive, or you might need more context (surrounding texts in the comment) to make the judgment, label “No clear opinion”. This usually results from poor segmentation, too many typos and the text itself does not imply any sentiment.
+        
+        <Context: Any,
+        Phrase: Please see my previous comments.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Any,
+        Phrase: Despite the fact that,
+        >
+        Sentiment: No clear opinion
+
+        <Context: Any,
+        Phrase: An stent it back.
+        >
+        Sentiment: No clear opinion
+    
+    4) a question with a neutral tone that don not imply any positive or negative sentiment.
+        <Context: Any,
+        Phrase: Where can I buy the product? 
+        >
+        Sentiment: No clear opinion
+
+        <Context: Any,
+        Phrase: Is it too late?
+        >
+        Sentiment: No clear opinion
+    5) The phrase describes the product is not lacking in quality or customers are not experiencing any issues or their expectations are met. 
+        <Context: Neutral,
+        Phrase: The fabric is soft.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Neutral,
+        Phrase: The fabric did not fade after multiple washes.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Neutral,
+        Phrase: I don’t have any issues so far.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Neutral,
+        Phrase: The product is not broken.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Neutral,
+        Phrase: I am still using the product.
+        >
+        Sentiment: No clear opinion
+        <Context: Any,
+        Phrase: I like the fabric is soft.
+        >
+        Sentiment: Positive
+
+        <Context: Any,
+        Phrase: Soft fabric makes them comfortable.
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: The cloth is not see-through!
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: The fabric is soft.
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: I don’t have any issues so far.
+        >
+        Sentiment: Positive
+
+        <Context: Negative,
+        Phrase: The cloth is not see-through!
+        >
+        Sentiment: Negative
+
+        <Context: Negative,
+        Phrase: The fabric is soft.
+        >
+        Sentiment: Negative
+
+        <Context: Negative,
+        Phrase: I don’t have any issues so far.
+        >
+        Sentiment: No clear opinion
+
+    6) The phrase only contains nouns in neutral context. The noun does not contain any positive/negative sentiment.  They become positive or negative only in positive or negative contexts but remain no clear opinion in the neutral context.
+        <Context: Neutral,
+        Phrase: Friendliness of staff.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Neutral,
+        Phrase: Speed of service.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Positive,
+        Phrase: Professionalism.
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Friendliness of staff.
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Speed of service
+        >
+        Sentiment: Positive
+
+        <Context: Negative,
+        Phrase: Professionalism
+        >
+        Sentiment: Negative
+
+        <Context: Negative,
+        Phrase: Friendliness of staff
+        >
+        Sentiment: Negative
+
+        <Context: Negative,
+        Phrase: Speed of service
+        >
+        Sentiment: Negative
+    
+     7) The sign-off language such as “thank you”, “thanks”
+        <Context: Neutral,
+        Phrase: Thanks!
+        >
+        Sentiment: No clear opinion
+
+        <Context: Neutral,
+        Phrase: Thank you so much.
+        >
+        Sentiment: No clear opinion
+
+2. Positive:
+    Phrase contains any positive opinion from the customer regarding customer experience.
+        <Context: Any,
+        Phrase: Casey was friendly, direct, and knowledgeable.
+        >
+        Sentiment: Positive
+
+        <Context: Any,
+        Phrase: I would also like to comment, room cleanliness was good.
+        >
+        Sentiment: Positive
+
+        <Context: Any,
+        Phrase: The daily text I received from you about scheduling dinners was nice and it worked well.
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Product and service
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Food quality and speed
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Cleanliness of the room
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Lower price
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Better service
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Fewer issues
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Being able to view my bills
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Ability to view my bills
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Because the people you hire
+        >
+        Sentiment: Positive
+
+        <Context: Any,
+        Phrase: but the service is good
+        >
+        Sentiment: Positive
+
+        <Context: Any,
+        Phrase: Although the service is good
+        >
+        Sentiment: Positive
+
+        <Context: Neutral,
+        Phrase: Bed is soft.
+        >
+        Sentiment: No clear opinion
+
+        <Context: Any,
+        Phrase: Bed is comfortable.
+        >
+        Sentiment: Positive
+
+        <Context: Positive,
+        Phrase: Bed is Bed is hard.
+        >
+        Sentiment: Positive
+
+        <Context: Negative,
+        Phrase: Bed is Bed is hard.
+        >
+        Sentiment: Negative
+
+        <Context: Positive,
+        Phrase: Bed is Bed is soft.
+        >
+        Sentiment: Positive
+
+        <Context:Negative,
+        Phrase: Bed is Bed is soft.
+        >
+        Sentiment: Negative
+
+3. Strongly Positive
+    Phrase generally contains a strong tone for positive sentiment. The customer might use the modifier like "very", "extremely", "really" or any strong adjective like great, awesome, or best. 
+        <Context:Any,
+        Phrase: It was the best customer service experience of my life! Seriously!
+        >
+        Sentiment: Strongly positive
+
+        <Context:Any,
+        Phrase: The room was great, wonderful view and very comfortable!
+        >
+        Sentiment: Strongly positive
+
+4. Negative
+    Phrase contains 
+        1) any negative opinion from the customer regarding customer experience (anger, frustration, dissatisfied) or 
+        2) any issues the customer is experiencing
+    Adjectives that are always associated with poor customer experiences (“uncomfortable bed”, “slow/poor service”, “rude staff”, “expensive product/high cost”, “unacceptable responses”) should be labeled negative sentiment.
+        
+        <Context:Any,
+        Phrase: Was dissatisfied with the lack of inventory at the COMPANY Counter.
+        >
+        Sentiment: Negative
+
+        <Context:Negative,
+        Phrase: Product and service.
+        >
+        Sentiment: Negative
+
+        <Context:Negative,
+        Phrase: Food quality and speed.
+        >
+        Sentiment: Negative
+
+        <Context:Negative,
+        Phrase: Cleanliness of the room.
+        >
+        Sentiment: Negative
+
+        <Context:Negative,
+        Phrase: Hidden fees.
+        >
+        Sentiment: Negative
+
+        <Context:Negative,
+        Phrase: Being able to view my bills
+        >
+        Sentiment: Negative
+
+        <Context:Negative,
+        Phrase: Ability to view my bills
+        >
+        Sentiment: Negative
+
+        <Context:Negative,
+        Phrase: Because the people you hire
+        >
+        Sentiment: Negative
+
+        <Context:Any,
+        Phrase: but the service is slow
+        >
+        Sentiment: Negative
+
+        <Context:Any,
+        Phrase: although the service is slow
+        >
+        Sentiment: Negative
+
+        <Context:Any,
+        Phrase: The setup icon disappears from the application today.
+        >
+        Sentiment: Negative
+
+        <Context:Any,
+        Phrase: High fees
+        >
+        Sentiment: Negative
+
+        <Context:Any,
+        Phrase: Why is it expensive?  
+        >
+        Sentiment: Negative
+5. Strongly Negative
+    Phrase generally contains a strong tone for negative sentiment. The customer might use the modifier like "very", "extremely", "really", "worst" or any strong adjective like worst.
+        <Context:Any,
+        Phrase: The price of cigarettes was extremely high and the selection of brands was very small
+        >
+        Sentiment: Strongly negative
+
+        <Context:Any,
+        Phrase: Acme places zero value on its hosts, lacks a professional staff, lacks clear SOPs for resolution of financial issues, and generally comes across as completely ill-equipped to be playing long term in this space.
+        >
+        Sentiment: Strongly negative
+
+6. Mixed Opinion
+    Phrase contains both positive and negative sentiments. 
+
+7 Suggestion
+    Phrase contains some specific actions or suggestions that lead to fulfilling the customer's wish/intent. 
+
+     - In any context, some common suggestions have patterns "It would be nice/great/good ...", "you need to", "You have to", "you should", "I wish", "..would be helpful", "...would help.."
+     - In a negative or suggestion context, phrases starting with comparative words (better, lower, fewer, easier, etc) imply the customers want the company to take action to make certain things better, lower, fewer, or easier, and hence it’s a suggestion.
+     - In a suggestion context, phrases with “Being able to do something” or “ability to do something” imply the customers want the company to fulfill their needs, and hence it’s a suggestion.
+     - The phrase contains “I would like to” but it’s not a suggestion to the company to take action to fulfill the customers’ needs.
+        ◦ I would like to comment that the service is slow
+        ◦ I wish I can give you a 10 but the service this time is slow
+     - The phrases are descriptions of the problem or complaints. It does not contain any suggested “action” to take.
+        ◦ The service is slow
+        ◦ The price is too high
+
+<Context:Any,
+    Phrase: You should offer dropping off products in the doorway such as your competitor Wayfair.
+    >
+    Sentiment: Suggestion
+
+    <Context:Any,
+    Phrase: You should let your customers know if the shipment is delayed.
+    >
+    Sentiment: Suggestion
+
+    <Context:Any,
+    Phrase: Please provide the Spanish mobile app.
+    >
+    Sentiment: Suggestion
+
+    <Context:Any,
+    Phrase: Please teach your people how to resolve the issues.
+    >
+    Sentiment: Suggestion
+
+    <Context:Any,
+    Phrase: You need to have more cashiers at all times.
+    >
+    Sentiment: Suggestion
+
+    <Context:Any,
+    Phrase: You have to train your employees to handle the issues.
+    >
+    Sentiment: Suggestion
+
+    <Context:Any,
+    Phrase: Would be great to open more stores.
+    >
+    Sentiment: Suggestion
+
+    <Context:Any,
+    Phrase: It would be good to have free shipping when I spend more than $50.>
+    Sentiment: Suggestion
+
+    <Context:Any,
+    Phrase: It would be nice if you can lower your price.
+    >
+    Sentiment: Suggestion
+    
+    <Context:Any,
+    Phrase: I wish they had just a bit more selection in the store.
+    >
+    Sentiment: Suggestion
+
+    <Context:Suggestion,
+    Phrase: Lower price
+    >
+    Sentiment: Suggestion
+
+    <Context:Suggestion,
+    Phrase: Better service
+    >
+    Sentiment: Suggestion
+
+    <Context:Suggestion,
+    Phrase: Fewer issues
+    >
+    Sentiment: Suggestion
+
+    <Context:Suggestion,
+    Phrase: Being able to have more resources
+    >
+    Sentiment: Suggestion
+    
+    <Context:Suggestion,
+    Phrase: Ability to have more resources
+    >
+    Sentiment: Suggestion
+
+    <Context:Suggestion,
+    Phrase: Having more resources available
+    >
+    Sentiment: Suggestion
+
+    <Context:Suggestion,
+    Phrase: No high fees
+    >
+    Sentiment: Suggestion
+
+    <Context:Suggestion,
+    Phrase: Free beer
+    >
+    Sentiment: Suggestion
+
+
+
+
+
+
+    
+
+
+
