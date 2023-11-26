@@ -5,6 +5,7 @@ from langchain.chains import LLMChain
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
 import gradio as gr
 
+
 response_schemas = [
     ResponseSchema(name="aspect_term", description="aspect term"),
     ResponseSchema(name="sedntiment", description="sentiment, can be positive, neutral or negative")
@@ -36,10 +37,14 @@ prompt = PromptTemplate(
 )
 
 #model = OpenAI(openai_api_key='xxx', temperature=0)
-model = OpenAI(temperature=0)
+model = OpenAI(temperature=0,                
+               openai_api_key=os.environ["OPENAI_API_KEY"])
+
+
+
 def absa(title, review):
     _input = prompt.format_prompt(title=title, review=review)
-    output = model(_input.to_string())
+    output = model.predict(_input.to_string())
     return output
 
 with gr.Blocks() as demo:
@@ -50,5 +55,5 @@ with gr.Blocks() as demo:
 
     greet_btn.click(fn=absa, inputs=[title_input, review_input], outputs=absa_output, api_name="Aspect Based Sentiment Analysis")
    
-
-demo.launch(share=True)
+if __name__ == "__main__":
+    demo.launch(share=True)

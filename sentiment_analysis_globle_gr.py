@@ -45,8 +45,10 @@ df_data = df.loc[:, ['content']]
 df_data = df_data.iloc[:100,:]
 
 df_data['gsa'] = [globle_sentiment_analysis(content) for content in df_data['content'].values]
-df_data.to_csv('../data/globle_sa.csv')
+df_data.to_csv('../data/globle_sa.csv') 
 
 debug = 1
 '''
 gr.Interface(fn=globle_sentiment_analysis, inputs="text", outputs="text").launch(share=True)  
+
+## run: gradio app.py

@@ -64,30 +64,13 @@ prompt = PromptTemplate(
 
 #model = OpenAI(openai_api_key='xxx', temperature=0)
 model = OpenAI(temperature=0)
-'''
-title_ = "The hype is real, I stand corrected"
-review_ = "For so long I never bought these because I didn’t want to support the kardashians financially since they promoted it often, however now years later, \
-    I tried it and I love it. A family friend who went to cosmetology school, and hair school, \
-    recommended these to me after I told her that ever since I cut my hair super short in college I feel like my hair doesn’t grow pst a certain length anymore. \
-    I started taking these and my lashes are fuller and my brows are fuller! \
-    Best of all my hair is literally noticeably longer than it ever has been other than when I was a little girl. \
-    I didn’t want to believe it but it works. I will note that I have a sensitivity to biotin, but most HSN type of vitamins have biotin in them. \
-    Because of this I have the tendency to break out when taking anything with it as an incredibly even in the smallest amount. \
-    This is something I never was looking to “sacrifice” with other vitamins because they didn’t show much results and I would break out quite a bit, \
-    even on my back (I NEVER break out there). My break outs while taking sugar bear were not the worst, but I was getting more than one which I never do. \
-    I use a pretty consistent routine that otherwise leaves my skin pretty clear so I feel like I notice everything on my face. Will be repurchasing !"
 
-_input = prompt.format_prompt(title=title_, review=review_)
-
-output = model(_input.to_string())
-'''
 def absa(title, review):
     _input = prompt.format_prompt(title=title, review=review)
     output = model(_input.to_string())
     return output
 
-
-import pandas as pd
+###### command line   #######
 df = pd.read_csv('./data/ABSA.csv')
 df_data = df.loc[:, ['title', 'content']]
 df_data = df_data.iloc[:3,:]
@@ -103,8 +86,9 @@ for idx in range(len(df_data)): ############################ go over row
 
 df_data.to_csv('SA_without_appointed_aspect.csv')
 
-debug = 1
+#######  end command line
 
+#####  Gradio UI
 '''
 with gr.Blocks() as demo:
     title_input = gr.Textbox(label="Title")
@@ -117,5 +101,6 @@ with gr.Blocks() as demo:
 
 demo.launch(share=False)
 '''
-debug = 1
+
+#####  end Gradio UI
 
