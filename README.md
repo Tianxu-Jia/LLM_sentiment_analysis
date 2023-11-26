@@ -6,6 +6,7 @@ In this repository, there are three kinds of sentiment analysis. They are normal
 1. Normal globle sentiment analysis.
 
     sentiment_analysis_globle_gr.py
+
     sentiment_analysis_globle.ipynb
     
 
@@ -20,6 +21,7 @@ In this repository, there are three kinds of sentiment analysis. They are normal
     * apects automatic detection sentiment analysis:
 
         absa_no_appointed_aspects_gr.py
+        
         absa_no_appointed_aspects_gr.ipynb
     
     * appointed aspects sentiment analysis
